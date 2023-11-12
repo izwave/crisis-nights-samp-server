@@ -11,6 +11,7 @@ bin/
 config/
 docs/
 filterscripts/
+/scriptfiles/*/*
 
 # Ignorar arquivos de configuração do ambiente de desenvolvimento local
 .vscode/
