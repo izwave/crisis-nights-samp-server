@@ -1,0 +1,25 @@
+# Ignorar arquivos compilados e temporários do Pawn
+*.amx
+*.amx64
+*.pwn.bak
+*.lst
+*.bak
+*.db
+
+# Ignorar diretórios específicos
+bin/
+config/
+docs/
+filterscripts/
+
+# Ignorar arquivos de configuração do ambiente de desenvolvimento local
+.vscode/
+.idea/
+.project
+.cproject
+.settings/
+
+# Ignorar arquivos de sistema
+Thumbs.db
+Desktop.ini
+DS_Store

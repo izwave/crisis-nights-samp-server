@@ -1,0 +1,33 @@
+enum SEVER_GENERAL_GANGZONE
+{
+	GANGZONE_FIBONACCI_1,
+	GANGZONE_FIBONACCI_2,
+	GANGZONE_FIBONACCI_3,
+	GANGZONE_FIBONACCI_5,
+	GANGZONE_FIBONACCI_8,
+	GANGZONE_FIBONACCI_13,
+	GANGZONE_FIBONACCI_21,
+}
+
+new ServerGangZone[SEVER_GENERAL_GANGZONE];
+
+index_GangZone(bool:action)
+{
+	if(action)
+	{
+		ServerGangZone[GANGZONE_FIBONACCI_1] = GangZoneCreate(-1.000, -8.000, 9.000, 2.00);
+		ServerGangZone[GANGZONE_FIBONACCI_2] = GangZoneCreate(-11.000, 2.000, 9.000, 22.000);
+		ServerGangZone[GANGZONE_FIBONACCI_3] = GangZoneCreate(-41.000, -8.000, -11.000, 22.000);
+		ServerGangZone[GANGZONE_FIBONACCI_5] = GangZoneCreate(-41.000, -58.000, 9.000, -8.000);
+		ServerGangZone[GANGZONE_FIBONACCI_8] = GangZoneCreate(9.000, -58.000, 89.000, 22.0000);
+		ServerGangZone[GANGZONE_FIBONACCI_13] = GangZoneCreate(-41.000, 22.000, 90.000, 152.000);
+		ServerGangZone[GANGZONE_FIBONACCI_21] = GangZoneCreate(-251.000, -58.000, -41.000, 152.000);
+	}
+	else
+	{
+		gTimes<_:SEVER_GENERAL_GANGZONE,x>
+		{
+			GangZoneDestroy(ServerGangZone[SEVER_GENERAL_GANGZONE:x]);
+		}
+	}
+}
